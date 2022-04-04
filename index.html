@@ -9,54 +9,45 @@
 
 <body>
   
-<video id="tplayer"></video>
+<video id="tplayerhtml"></video>
 </body>
   
   
   <script>
     
-    const options = {
-  id: "tplayerhtml", // anything
-  playerElem: document.getElementById("tplayer"), // grabbing the video element from the DOM
-  source: {
-    dash: "http://109.111.175.3:8000/live/Makenzic_vebinar_id_12345/index.m3u8",
-    hls: "http://109.111.175.3:8000/live/Makenzic_vebinar_id_12345/index.mpd",
-  },
-  sourceHeaders: {
-    dash: {
-      // "T-Header": "You can send header like this",
+const options = {
+    id: "tplayerhtml", // anything
+    playerElem: document.getElementById("tplayer"), // grabbing the video element from the DOM
+    source: {
+      dash: "http://109.111.175.3:8000/live/Makenzic_vebinar_id_12345/index.m3u8",
+      hls: "http://109.111.175.3:8000/live/Makenzic_vebinar_id_12345/index.mpd",
     },
-    hls: {
-      // "T-Header": "You can send header like this",
-    },
-  },
-  drm: {
-    widevine: {
-      url: "https://widevine-proxy.appspot.com/proxy", // Widevine license URL
-      headers: {
+    sourceHeaders: {
+      dash: {
+        // "T-Header": "You can send header like this",
+      },
+      hls: {
         // "T-Header": "You can send header like this",
       },
     },
-    playready: {
-      url: "https://playready.directtaps.net/pr/svc/rightsmanager.asmx?PlayRight=1&ContentKey=EAtsIJQPd5pFiRUrV9Layw==", // Playready license URL
-      headers: {
-        // "T-Header": "You can send header like this",
+    drm: {
+      widevine: {
+        url: "https://widevine-proxy.appspot.com/proxy", // Widevine license URL
+        headers: {
+          // "T-Header": "You can send header like this",
+        },
       },
+   
     },
-  },
-  ui: {
-    mainColor: "red",
-  },
-};
-    
-    
-    
-    
- window.tplayer(options);
-    
-    
-    
-    
+    ui: {
+      mainColor: "red",
+    },
+  };
+      
+      
+      
+      
+   window.tplayer(options); 
     
 </script>
   
