@@ -57,7 +57,7 @@ try {
   await bpmnJS.importXML(someDiagram);
 
   console.log('success!');
-  viewer.get('canvas').zoom('fit-viewport');
+  viewer.get('diagram').zoom('fit-viewport');
 } catch (err) {
 
   console.error('something went wrong:', err);
